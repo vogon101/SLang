@@ -2,6 +2,7 @@ package com.vogon101.SLang.interpreter
 
 import java.util.NoSuchElementException
 
+import com.vogon101.SLang.STDLIB.STDLIB
 import com.vogon101.SLang.parsers.SLangParser
 
 /**
@@ -9,6 +10,8 @@ import com.vogon101.SLang.parsers.SLangParser
  *
  */
 class Program (val lines : List[Line]) {
+
+  Program.addAvailableLibs(STDLIB.libs)
 
   def this (parser: SLangParser, programText: String) {
     this(parser.parseAll(parser.program, programText).get.lines)
@@ -82,5 +85,17 @@ object Program {
 
   def setProg (program: Program) = {_program = program}
   def p = _program
+
+  private var _libs: Map[String,Library] = Map()
+
+  def libs = _libs
+
+  def addAvailableLib (name:String,library: Library): Unit = {
+    _libs += (name -> library)
+  }
+
+  def addAvailableLibs (libs:Map[String, Library]): Unit = {
+    _libs ++= libs
+  }
 
 }
