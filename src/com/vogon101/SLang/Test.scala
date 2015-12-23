@@ -17,12 +17,14 @@ object Test extends App{
     val parser = new SLangParser( )
     val program = new
          Program( parser, Source.fromFile( "Examples/" + StdIn.readLine( "Enter File to Run (Examples/<file-name>.slang)" ) + ".slang" ).mkString )
-    println( "Done" )
     println( "" )
-    println( "====START====" )
+    println( "========START========" )
     println( "" )
     program.loadLib( new STDIOFunctions( ) )
     program.interpret( )
+    println( "" )
+    println("=======RESTART=======")
+    println( "" )
   }
 
 }
