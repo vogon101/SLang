@@ -16,7 +16,7 @@ class SLangParser extends JavaTokenParsers {
 
   def line = (assignment | element) <~ ";" ^^ (x=>x.asInstanceOf[Line])
 
-  def assignment = assignmentPartOne ~ element ^^ (x=> {println(s"ASSIGN $x"); x match {
+  def assignment = assignmentPartOne ~ element ^^ (x=> {/*println(s"ASSIGN $x"); */x match {
 
     case variable ~ e => new Assignment(variable, e.asInstanceOf[Element])
   }})
@@ -24,15 +24,15 @@ class SLangParser extends JavaTokenParsers {
   def assignmentPartOne = variable <~ "=" ^^ (x=>x.name)
 
 
-  def element: Parser[Any] = value | variable | function_call ^^ (x=> {println(s"ELEMENT $x"); x match {
+  def element: Parser[Any] = value | variable | function_call ^^ (x=> {/*println(s"ELEMENT $x"); */x match {
 
     case default => default.asInstanceOf[Element]
   }})
 
-  def variable  = "$" ~> "[a-zA-Z0-9]+".r ^^ (x=> {println(s"VARIABLE $x"); new Variable("$" + x)})
+  def variable  = "$" ~> "[a-zA-Z0-9]+".r ^^ (x=> {/*println(s"VARIABLE $x");*/ new Variable("$" + x)})
 
   def function_call = function_name ~ parameters ^^ {
-    case name ~ elements => println(s"Function call $name");new FunctionCall(name , elements)
+    case name ~ elements => /*println(s"Function call $name");*/new FunctionCall(name , elements)
   }
 
   def parameters = "(" ~> repsep(element, ",") <~ ")" ^^ {
@@ -41,14 +41,14 @@ class SLangParser extends JavaTokenParsers {
 
   def function_name = "[a-zA-Z0-9]+".r ^^ (x=>x.toString)
 
-  def list: Parser[List[Any]] = "[" ~> repsep(element, ",") <~ "]"
+  def list = "[" ~> repsep(element, ",") <~ "]" ^^ (x=>new Value(x))
 
   def value = (
       stringLiteral ^^ (x => x.toString.substring(1,x.length-1))
     | number
     | list
     | "null" ^^ (x => null)
-        | "true" ^^ (x => true)
+    | "true" ^^ (x => true)
     | "false" ^^ (x => false)
    ) ^^ (x => new Value(x))
 

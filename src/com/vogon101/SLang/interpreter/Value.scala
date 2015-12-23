@@ -5,6 +5,12 @@ package com.vogon101.SLang.interpreter
  */
 class Value (val value:Any) extends Element{
 
-  def run () :Any = value
+  def run () :Any = {
+    value match {
+      case v:List[Value] => v.map(x=>x.run())
+      case v:Value =>v.run()
+      case v => v
+    }
+  }
 
 }

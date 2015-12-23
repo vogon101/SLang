@@ -10,7 +10,7 @@ class Assignment (val variable: String, val value: Element) extends Line{
     Program.p.setVariable(variable, value.run())
   }
 
-  println("Variable: " + variable)
-  println(s"Value: $value")
+  //println("Variable: " + variable)
+  //println(s"Value: $value")
 
 }
