@@ -12,3 +12,5 @@ A basic programming language built in scala
 * Lists (can contain multiple types)
   * [1,2,3,4]
   * [1,"Two",sqrt(9)]
+* SemiColons optional at the end of lines
+* Inline comments with //
