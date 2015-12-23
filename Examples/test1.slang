@@ -1,9 +1,12 @@
-require("MATH");
-print("Hello World");
-$myVar = 12;
-print ("The value of $myVar is ", $myVar);
-$name = input("What is your name? ");
-print("Hello ",$name);
-print ("The square root of 1823 is ", sqrt(1823));
-print (sqrt(input("Give me a number to square root >")));
-print ("This is a list ", [1,2, "Three"]);
+//Require MATH module for sqrt function
+require("MATH")
+print("Hello World")
+print ("Comments enabled")
+$myVar = 12
+print ("The value of $myVar is ", $myVar)
+$name = input("What is your name? ")
+print("Hello ",$name)//Look, inline comments
+print ("The square root of 1823 is ", sqrt(1823))
+print (sqrt(input("Give me a number to square root >")))
+print ("This is a list ", [1,2, "Three"]);print("This is on the same line")
+print ("Test");//Test;print("Please dont show up")

@@ -25,7 +25,9 @@ class Program (val lines : List[Line]) {
 
   def interpret(): Unit = {
     lines.foreach(x => {
-      x.run()
+      //println(x)
+      if (x != null)
+        x.run()
     })
   }
 

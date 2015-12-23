@@ -14,7 +14,9 @@ class SLangParser extends JavaTokenParsers {
 
   def program = rep(line) ^^ {x=>new Program(x)}
 
-  def line = (assignment | element) <~ ";" ^^ (x=>x.asInstanceOf[Line])
+  def line = (assignment | element | comment) <~ (";" | "[\n\r]*".r) ^^ (x=>x.asInstanceOf[Line])
+
+  def comment = "//.*".r ^^ (x=>new Comment())
 
   def assignment = assignmentPartOne ~ element ^^ (x=> {/*println(s"ASSIGN $x"); */x match {
 
