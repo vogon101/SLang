@@ -10,26 +10,35 @@ import com.vogon101.SLang.interpreter.Element
  * Main parsers for SLang. Base is program. parseAll(program,text) will return the tree
  * for running correct program
  */
-class SLangParser extends JavaTokenParsers {
+class SLangParser extends SLangMathsParsers with SLangBooleanParsers{
+
+  //TODO: Make scala tests for the parsers
 
   def program = rep(line) ^^ {x=>new Program(x)}
 
-  def line = (assignment | element | comment) <~ (";" | "[\n\r]*".r) ^^ (x=>x.asInstanceOf[Line])
+  def line = (assignment | element | comment /*| controlStatement*/) <~ (";" | "[\n\r]*".r) ^^ (x=>x.asInstanceOf[Line])
 
   def comment = "//.*".r ^^ (x=>new Comment())
 
-  def assignment = assignmentPartOne ~ element ^^ (x=> {/*println(s"ASSIGN $x"); */x match {
-
+  def assignment = assignmentPartOne ~ element ^^ {
     case variable ~ e => new Assignment(variable, e.asInstanceOf[Element])
-  }})
+  }
 
   def assignmentPartOne = variable <~ "=" ^^ (x=>x.name)
 
+  //def controlStatement = (("if" | "while") ~ booleanStatement ~ codeBlock) ^^ {
+  //  case "if" ~ bs ~ cb => new IfStatement(bs, cb.asInstanceOf[CodeBlock])
 
-  def element: Parser[Any] = value | variable | function_call ^^ (x=> {/*println(s"ELEMENT $x"); */x match {
+  //}
 
+  //TODO: Actually do this
+  def booleanStatement = "(" ~> "true" | "false" <~ ")"
+
+  def codeBlock = "{" ~> rep(line) <~ "}" ^^ (x => new CodeBlock(x))
+
+  def element: Parser[Any] = value | variable | function_call | codeBlock ^^ {
     case default => default.asInstanceOf[Element]
-  }})
+  }
 
   def variable  = "$" ~> "[a-zA-Z0-9]+".r ^^ (x=> {/*println(s"VARIABLE $x");*/ new Variable("$" + x)})
 
@@ -53,15 +62,4 @@ class SLangParser extends JavaTokenParsers {
     | "true" ^^ (x => true)
     | "false" ^^ (x => false)
    ) ^^ (x => new Value(x))
-
-  //TODO: Make this accept ints and floats
-  def number = floatingPointNumber ^^ (x => {
-    try {
-      x.toInt
-    }
-    catch {
-      case e:NumberFormatException => x.toFloat
-    }
-
-  })
 }
