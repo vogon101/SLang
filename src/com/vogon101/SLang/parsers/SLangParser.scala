@@ -1,6 +1,7 @@
 package com.vogon101.SLang.parsers
 
 import com.vogon101.SLang.interpreter._
+import com.vogon101.SLang.interpreter.control.CodeBlock
 
 import scala.util.parsing.combinator._
 
@@ -36,7 +37,7 @@ class SLangParser extends SLangMathsParsers with SLangBooleanParsers{
 
   def codeBlock = "{" ~> rep(line) <~ "}" ^^ (x => new CodeBlock(x))
 
-  def element: Parser[Any] = value | variable | function_call | codeBlock ^^ {
+  def element: Parser[Any] = variable | mathExpression | function_call | codeBlock | value ^^ {
     case default => default.asInstanceOf[Element]
   }
 

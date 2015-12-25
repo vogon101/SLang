@@ -1,10 +1,10 @@
-package com.vogon101.SLang
+package com.vogon101.SLang.Tests
 
 import com.vogon101.SLang.STDLIB.STDIO.STDIOFunctions
-import com.vogon101.SLang.interpreter.{ Value, FunctionCall, Program }
+import com.vogon101.SLang.interpreter.Program
 import com.vogon101.SLang.parsers.SLangParser
 
-import scala.io.{ StdIn, Source }
+import scala.io.{ Source, StdIn }
 
 /**
  * Testing SLang

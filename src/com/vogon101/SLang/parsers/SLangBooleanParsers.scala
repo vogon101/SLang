@@ -8,4 +8,6 @@ import scala.util.parsing.combinator.JavaTokenParsers
  */
 trait SLangBooleanParsers extends JavaTokenParsers{
 
+  def element: Parser[Any]
+
 }

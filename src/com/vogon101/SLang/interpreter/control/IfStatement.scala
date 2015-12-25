@@ -1,4 +1,6 @@
-package com.vogon101.SLang.interpreter
+package com.vogon101.SLang.interpreter.control
+
+import com.vogon101.SLang.interpreter.Line
 
 /**
  * Created by Freddie Poser on 23/12/2015.
