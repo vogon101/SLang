@@ -41,7 +41,7 @@ object DebugTestsExampleDir extends ConsoleFileApplication{
 
   override def ADD_EXT = true
 
-  override def run(p:SLangParser, text:String): Unit = {
+  override def run(p:SLangParser, text:String): Unit  = {
     val r = p.parseAll(p.program, text)
     println(r)
     r.get.interpret()

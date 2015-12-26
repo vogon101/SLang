@@ -14,3 +14,18 @@ A basic programming language built in scala
   * [1,"Two",sqrt(9)]
 * SemiColons optional at the end of lines
 * Inline comments with //
+* Math
+  * 2*3
+  * 2+3
+  * 2/3
+  * 2-3
+  * 2^3
+  * 2+4*(5+4)
+  * Exponents don't have correct precedence
+  * Works with all elements
+    * $myVar * 2
+    * "String" * 2
+    * "String" + "Other String"
+    * [1,2,3,4] + 5
+    * [1,2,3,4] - 4
+
