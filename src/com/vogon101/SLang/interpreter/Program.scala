@@ -2,6 +2,7 @@ package com.vogon101.SLang.interpreter
 
 import java.util.NoSuchElementException
 
+import com.vogon101.SLang.STDLIB.STDIO.STDIOFunctions
 import com.vogon101.SLang.STDLIB.STDLIB
 import com.vogon101.SLang.parsers.SLangParser
 
@@ -13,6 +14,7 @@ class Program (val lines : List[Line]) {
 
   Program.addAvailableLibs(STDLIB.libs)
 
+
   def this (parser: SLangParser, programText: String) {
     this(parser.parseAll(parser.program, programText).get.lines)
   }
@@ -20,6 +22,8 @@ class Program (val lines : List[Line]) {
   private var _functions:Map[String, Function] = Map()
 
   private var _variables:Map[String, Any] = Map()
+
+  this.loadLib(new STDIOFunctions())
 
   Program.setProg(this)
 
