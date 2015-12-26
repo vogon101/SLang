@@ -18,3 +18,8 @@ print ("Test");//Test;print("Please dont show up")
     print ("Hello again ", $name)
 
 }
+
+$myVar = 100
+print ($myVar)
+$myVar = $myVar + 100
+print ($myVar + 100)

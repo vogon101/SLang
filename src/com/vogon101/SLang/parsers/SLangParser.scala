@@ -11,7 +11,7 @@ import com.vogon101.SLang.interpreter.Element
  * Main parsers for SLang. Base is program. parseAll(program,text) will return the tree
  * for running correct program
  */
-class SLangParser extends SLangMathsParsers with SLangBooleanParsers{
+class SLangParser extends SLangMathsParsers with SLangBooleanParsers with PackratParsers{
 
   //TODO: Make scala tests for the parsers
 
@@ -37,7 +37,7 @@ class SLangParser extends SLangMathsParsers with SLangBooleanParsers{
 
   def codeBlock = "{" ~> rep(line) <~ "}" ^^ (x => new CodeBlock(x))
 
-  def element: Parser[Any] = variable | mathExpression | function_call | codeBlock | value ^^ {
+  lazy val element: PackratParser[Any] = mathExpression |variable | function_call | codeBlock | value  ^^ {
     case default => default.asInstanceOf[Element]
   }
 

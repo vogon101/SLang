@@ -8,6 +8,6 @@ import com.vogon101.SLang.parsers.SLangParser
 object AnyTest extends App {
 
   val p = new SLangParser()
-  println(p.parseAll(p.program, "print (2)"))
+  println(p.parseAll(p.program, "print ($myVar+2)"))
 
 }
