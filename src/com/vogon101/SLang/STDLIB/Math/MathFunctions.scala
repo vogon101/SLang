@@ -1,6 +1,6 @@
 package com.vogon101.SLang.STDLIB.Math
 
-import com.vogon101.SLang.interpreter._
+import com.vogon101.SLang.interpreter.{Element, Function}
 
 import com.vogon101.SLang.interpreter.Library
 

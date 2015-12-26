@@ -12,6 +12,9 @@ object GeneralConsoleLineApplication extends ConsoleLineApplication{
   def run(p: SLangParser, text: String): Unit = {
 
     val r = p.parseAll(p.program, text)
+    if (r.isEmpty) {
+      println(r)
+    }
     r.get.interpret()
 
   }
