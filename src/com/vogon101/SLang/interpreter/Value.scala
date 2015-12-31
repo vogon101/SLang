@@ -13,4 +13,9 @@ class Value (val value:Any) extends Element{
     }
   }
 
+  override def debug(): Unit = {
+    println("Value")
+    super.debug()
+  }
+
 }

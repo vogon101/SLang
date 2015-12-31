@@ -7,4 +7,8 @@ abstract class Line extends Runnable {
 
   def run(): Any
 
+  def debug() = {
+    println("Line")
+  }
+
 }

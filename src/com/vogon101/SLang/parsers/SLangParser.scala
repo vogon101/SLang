@@ -34,7 +34,16 @@ class SLangParser extends SLangMathsParsers with SLangBooleanParsers with Packra
 
   def codeBlock = "{" ~> rep(line) <~ "}" ^^ (x => new CodeBlock(x))
 
-  lazy val element: PackratParser[Any] = mathExpression |variable | function_call | codeBlock | value  ^^ {
+  lazy val element: PackratParser[Any] = (
+    comparison          |
+    boolean_expression  |
+    mathExpression      |
+    boolean             |
+    variable            |
+    value               |
+    function_call       |
+    codeBlock
+    ) ^^ {
     case default => default.asInstanceOf[Element]
   }
 
@@ -57,7 +66,6 @@ class SLangParser extends SLangMathsParsers with SLangBooleanParsers with Packra
     | number
     | list
     | "null" ^^ (x => null)
-    | "true" ^^ (x => true)
-    | "false" ^^ (x => false)
+
    ) ^^ (x => new Value(x))
 }

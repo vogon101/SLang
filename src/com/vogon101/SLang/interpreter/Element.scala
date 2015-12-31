@@ -6,6 +6,11 @@ package com.vogon101.SLang.interpreter
  */
 abstract class Element extends Line with Runnable{
 
+  override def debug() = {
+    println("Element")
+    super.debug()
+  }
+
 }
 
 

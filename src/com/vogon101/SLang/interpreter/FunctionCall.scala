@@ -20,9 +20,17 @@ class FunctionCall (val name: String, val args: List[Element]) extends Element {
 
   }
 
-  override def toString(): String = {
+  override def toString: String = {
     val length = args.length
     s"Function : $name with $length args"
+  }
+
+  override def debug(): Unit = {
+    println("Function Call")
+    println("Arguments")
+    args.foreach(x=>x.debug())
+    println("End Args")
+    super.debug()
   }
 
 }

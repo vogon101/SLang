@@ -10,6 +10,11 @@ class Assignment (val variable: String, val value: Element) extends Line{
     Program.p.setVariable(variable, value.run())
   }
 
+  override def debug(): Unit = {
+    println("Assignment")
+    super.debug()
+  }
+
   //println("Variable: " + variable)
   //println(s"Value: $value")
 

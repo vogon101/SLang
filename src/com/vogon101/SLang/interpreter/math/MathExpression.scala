@@ -10,6 +10,11 @@ class MathExpression (value: MathExpression = null) extends Element{
 
   def run(): Any = value.run()
 
+  override def debug(): Unit = {
+    println("Math Expression")
+    super.debug()
+  }
+
 }
 
 class Power(a:Element, b:Element) extends MathExpression {

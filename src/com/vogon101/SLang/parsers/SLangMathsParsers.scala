@@ -9,13 +9,11 @@ import scala.util.parsing.combinator.{ PackratParsers, JavaTokenParsers }
  * Created by Freddie Poser on 25/12/2015.
  *
  */
-trait SLangMathsParsers extends JavaTokenParsers with PackratParsers{
-
-  //TODO: Make this work with elements
+trait SLangMathsParsers extends JavaTokenParsers with PackratParsers {
 
   def element: Parser[Any]
-  def variable: Parser[Any]
-  def value: Parser[Any]
+  //def variable: Parser[Any]
+  //def value: Parser[Any]
 
   def number = float | integer
 

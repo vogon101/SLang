@@ -13,6 +13,7 @@ object DebugConsoleLineApplication extends ConsoleLineApplication{
 
     val r = p.parseAll( p.program, text )
     println( r )
+    r.get.debug()
     r.get.interpret( )
 
   }

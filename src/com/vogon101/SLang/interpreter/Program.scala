@@ -35,6 +35,10 @@ class Program (val lines : List[Line]) {
     })
   }
 
+  def debug (): Unit = {
+    lines.foreach(x => println(x.debug()))
+  }
+
   def getFunction (name: String): Function = {
     try {
       functions.get( name ).get

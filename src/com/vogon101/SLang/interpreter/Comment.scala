@@ -7,4 +7,9 @@ class Comment extends Line{
 
   def run () ={}
 
+  override def debug(): Unit = {
+    println("Comment")
+    super.debug()
+  }
+
 }

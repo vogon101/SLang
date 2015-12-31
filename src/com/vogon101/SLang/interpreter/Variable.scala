@@ -9,4 +9,9 @@ class Variable (val name: String) extends Element{
     Program.p.getVariable(name)
   }
 
+  override def debug(): Unit = {
+    println("Assignment")
+    super.debug()
+  }
+
 }
