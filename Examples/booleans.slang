@@ -19,7 +19,4 @@ print("$t == $f = false => ", $t == $f)
 print("$t == true = true => ", $t == true)
 
 print("Combined")
-print("2==2 && 3!=4 => ", (2==2) && (3!=4))
-print(2==2)
-print(3!=4)
-print(2==2 && 3!=4)
+print("(2==2) && (3!=4) => ", (2==2) && (3!=4))

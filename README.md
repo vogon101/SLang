@@ -28,4 +28,12 @@ A basic programming language built in scala
     * "String" + "Other String"
     * [1,2,3,4] + 5
     * [1,2,3,4] - 4
+* Booleans
+  * true && false
+  * true | false
+  * $myVar == $myOtherVar
+  * 2 > 1
+  * Not Perfect
+    * 2 == 2 && 3!=4 Fails
+    * Has to be (2==2) && (3!=4)
 
