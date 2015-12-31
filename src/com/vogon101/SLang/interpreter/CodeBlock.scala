@@ -1,6 +1,6 @@
-package com.vogon101.SLang.interpreter.control
+package com.vogon101.SLang.interpreter
 
-import com.vogon101.SLang.interpreter.{ Element, Line }
+import com.vogon101.SLang.STDLIB.Control.ReturnFunction
 
 /**
  * Created by Freddie Poser on 23/12/2015.
@@ -13,8 +13,9 @@ class CodeBlock (var _lines : List[Line]) extends Element{
   def run() :Any = {
 
     _lines = lines.filter(x =>x!=null)
-    lines.foreach(x=> {
-      x.run()
+    lines.foreach({
+      case x:FunctionCall => if (x.name == "return") return x.run()
+      case x => x.run()
     })
 
   }

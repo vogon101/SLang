@@ -1,0 +1,10 @@
+print("IF Tests")
+print("1 => ", if(true, "Correct", "FAIL"))
+print("2 => ", if((true && false), "FAIL", "Correct"))
+print("3 => ", if(true, "Correct"))
+print("4 => ", if(2>1, "Correct", "FAIL"))
+print("")
+print("WHILE Tests")
+$myVar = 0
+while($myVar < 5, {$myVar = $myVar + 1})
+print("1 => 5 => ", $myVar," => ", if($myVar == 5, "Correct", "FAIL"))

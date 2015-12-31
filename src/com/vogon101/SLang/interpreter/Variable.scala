@@ -14,4 +14,8 @@ class Variable (val name: String) extends Element{
     super.debug()
   }
 
+  def set (value: Any): Unit = {
+    Program.p.setVariable(name, value)
+  }
+
 }

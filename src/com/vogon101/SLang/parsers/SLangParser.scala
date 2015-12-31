@@ -1,11 +1,8 @@
 package com.vogon101.SLang.parsers
 
 import com.vogon101.SLang.interpreter._
-import com.vogon101.SLang.interpreter.control.CodeBlock
 
 import scala.util.parsing.combinator._
-
-import com.vogon101.SLang.interpreter.Element
 
 /**
  * Main parsers for SLang. Base is program. parseAll(program,text) will return the tree

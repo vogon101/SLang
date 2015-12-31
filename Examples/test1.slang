@@ -23,3 +23,5 @@ $myVar = 100
 print ($myVar)
 $myVar = $myVar + 100
 print ($myVar + 100)
+
+print("2 == 2 => ", 2==2)

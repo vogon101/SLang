@@ -21,7 +21,7 @@ class SquareRootFunction extends Function ("sqrt"){
 
   def call (args: List[Element]): Any = {
     if (args.length != 1) {
-      throw new IllegalArgumentException ("Wrong number of arguments for require function")
+      throw new IllegalArgumentException ("Wrong number of arguments for sqrt function")
     }
     math.sqrt(args(0).run().toString.toFloat)
   }
