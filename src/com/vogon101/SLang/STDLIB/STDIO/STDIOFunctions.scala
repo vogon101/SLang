@@ -24,7 +24,9 @@ class PrintFunction() extends Function("print"){
 
   def call (args: List[Element]): Any = {
     args.foreach(x=>{print(x.run())})
-    println()
+    //println(args.tail.run())
+    if(args(args.length-1).run() != "")
+      println()
   }
 
 

@@ -14,7 +14,7 @@ class CodeBlock (var _lines : List[Line]) extends Element{
 
     _lines = lines.filter(x =>x!=null)
     lines.foreach({
-      case x:FunctionCall => if (x.name == "return") return x.run()
+      case x:FunctionCall => if (x.name == "return") return x.run() else x.run()
       case x => x.run()
     })
 

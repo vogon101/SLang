@@ -4,6 +4,7 @@ import com.vogon101.SLang.interpreter.{ Variable, Element, Function, Library }
 
 /**
  * Created by Freddie Poser on 31/12/2015.
+ *
  */
 class ControlFunctions extends Library{
 
@@ -14,7 +15,9 @@ class ControlFunctions extends Library{
       "if" -> new IFFunction,
       "while" -> new WhileFunction,
       "foreach" -> new ForEachFunction,
-      "return" -> new ReturnFunction
+      "return" -> new ReturnFunction,
+      "else" -> new ElseFunction,
+      "elseif" -> new IFFunction
     )
   }
 
@@ -74,6 +77,19 @@ class ForEachFunction extends Function ("foreach"){
 }
 
 class ReturnFunction extends Function("return") {
+
+  def call (args: List[Element]): Any = {
+    if (args.length == 1) {
+      args(0).run()
+    }
+    else {
+      throw new IllegalArgumentException ("Wrong number of arguments for if function")
+    }
+  }
+
+}
+
+class ElseFunction extends Function("else") {
 
   def call (args: List[Element]): Any = {
     if (args.length == 1) {
