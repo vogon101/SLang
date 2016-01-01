@@ -7,7 +7,7 @@ A basic programming language built in scala
   * print (thisIsAFunction());
   * print (10.4);
   * To remove the new line at the end, pass a "" last
-  * print("Test ", "");print("- Same Line", "")
+    * print("Test ", "");print("- Same Line", "")
 * Variables (designated by a $)
   * $myVar = "This is a variable";
   * print ("The value of $myVar is ", $myVar);
