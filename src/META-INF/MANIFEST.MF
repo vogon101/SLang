@@ -1,4 +1,4 @@
 Manifest-Version: 0.1
 Class-Path: scala.jar
-Main-Class: com.vogon101.SLang.application.ConsoleFileRunner
+Main-Class: com.vogon101.SLang0.application.ConsoleFileRunner
 
