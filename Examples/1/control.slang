@@ -28,3 +28,9 @@ print("")
 print("RETURN Tests")
 $myVar = {print("Correct");return(10);print("FAIL")}
 print("1 => 10 => ", $myVar," => ", if($myVar == 10, "Correct", "FAIL"))
+
+print("Anonymous function")
+$myVar = {
+    print("This is from an anonymous function")
+}
+$myVar()

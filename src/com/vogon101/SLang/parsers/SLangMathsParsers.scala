@@ -17,7 +17,7 @@ trait SLangMathsParsers extends JavaTokenParsers with PackratParsers {
 
   def number = float | integer
 
-  def integer = wholeNumber ^^ {i => new Value(i.toInt)}
+  def integer = """[+-]?\d+""".r ^^ {i => new Value(i.toInt)}
   def float = """[+-]?[0-9]*((\.[0-9]+([eE][+-]?[0-9]+)?[fF]?)|([fF])|([eE][+-]?[0-9]+))\b""".r ^^ {f => new Value(f.toFloat)}
 
   lazy val mathExpression:PackratParser[Any]  = (term ~ rep("[+-]".r ~ term)) ^^ {

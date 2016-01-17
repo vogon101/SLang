@@ -55,3 +55,10 @@ A basic programming language built in scala
       * $myVar remains 5
     * Does not return a value
 
+## TODOs
+* Add better list construction
+* Add user defined functions
+* Compile to runnable jar
+* Make scripting adapter
+  * This will make it easier to use SLang as a scripting module in other projects
+  * ie for easy game modding

@@ -31,14 +31,14 @@ class SLangParser extends SLangMathsParsers with SLangBooleanParsers with Packra
 
   def codeBlock = "{" ~> rep(line) <~ "}" ^^ (x => new CodeBlock(x))
 
-  lazy val element: PackratParser[Any] = (
+  lazy val element: PackratParser[Element] = (
     comparison          |
     boolean_expression  |
     mathExpression      |
     boolean             |
+    function_call       |
     variable            |
     value               |
-    function_call       |
     codeBlock
     ) ^^ {
     case default => default.asInstanceOf[Element]
@@ -46,8 +46,11 @@ class SLangParser extends SLangMathsParsers with SLangBooleanParsers with Packra
 
   def variable  = "$" ~> "[a-zA-Z0-9]+".r ^^ (x=> {/*println(s"VARIABLE $x");*/ new Variable("$" + x)})
 
-  def function_call = function_name ~ parameters ^^ {
-    case name ~ elements => /*println(s"Function call $name");*/new FunctionCall(name , elements)
+  def function_call = ((function_name | variable) ~ parameters) ^^ {
+    case t ~ ts => (t, ts) match {
+      case (t:Variable, ts:List[Element]) => new FunctionCall(t.name, ts, anon = true)
+      case (t:String, ts:List[Element]) => new FunctionCall(t,ts)
+    }
   }
 
   def parameters = "(" ~> repsep(element, ",") <~ ")" ^^ {

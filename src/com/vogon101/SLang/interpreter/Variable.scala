@@ -10,12 +10,14 @@ class Variable (val name: String) extends Element{
   }
 
   override def debug(): Unit = {
-    println("Assignment")
+    println(s"Variable $name")
     super.debug()
   }
 
   def set (value: Any): Unit = {
     Program.p.setVariable(name, value)
   }
+
+  def get() = Program.p.getVariable(name)
 
 }

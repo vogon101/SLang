@@ -41,7 +41,7 @@ object ConsoleFileRunner {
   }
 
   def run (p: SLangParser, text: String): Unit = {
-    def r = p.parseAll(p.program, text)
+    val r = p.parseAll(p.program, text)
     r.get.interpret()
   }
 
