@@ -1,6 +1,6 @@
 package com.vogon101.SLang.Interpreter.STDLIB
 
-import com.vogon101.SLang.Interpreter.STDLIB.Control.ControlFunctions
+
 import com.vogon101.SLang.Interpreter.STDLIB.Math.MathFunctions
 import com.vogon101.SLang.Interpreter.STDLIB.STDIO.STDIOFunctions
 
@@ -12,8 +12,7 @@ object StandardLib {
 
   def libs = Map (
     "STDIO" -> new STDIOFunctions(),
-    "MATH"  -> new MathFunctions(),
-    "CONT"  -> new ControlFunctions()
+    "MATH"  -> new MathFunctions()
   )
 
 }

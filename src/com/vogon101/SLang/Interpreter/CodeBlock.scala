@@ -5,6 +5,8 @@ package com.vogon101.SLang.Interpreter
  */
 class CodeBlock(code: List[Line]) extends Element{
 
+  def this() = this(List())
+
   def run(): Any = {
     for (x <- code){
       if (x.isInstanceOf[ReturnStatement])

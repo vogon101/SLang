@@ -46,4 +46,10 @@ This is the full list of features that SLang (1.0) offers
 * Scoping
   * Also unlike SLang0, SLang1 has a scope stack behind it. This means that variables defined in a function, cannot be accessed from outside
   * Functions can read, but not write to variables above their scope
-  
+* Control Statements
+  * Ifs
+    * Ifs are like normal, modeled on Scala's
+    * They return the value of code run
+    * if (true) "Hello World" => Hello World
+  * Whiles (Do not return anything)
+    * while(true) print ("Loops")

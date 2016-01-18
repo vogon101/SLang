@@ -66,12 +66,25 @@ class SLangParser extends JavaTokenParsers with MathParsers with BooleanParsers 
 
     )
 
-  lazy val controlStatement:PackratParser[Element] = returnStatement
+  lazy val controlStatement:PackratParser[Element] = returnStatement | ifStatement | whileLoop
 
   lazy val returnStatement:PackratParser[ReturnStatement] = "return" ~> element ^^ (new ReturnStatement(_))
 
-  lazy val ifStatement:PackratParser[Any] = ("if" ~ "(") ~> booleanExpression <~ ")" <~ codeBlock
+  lazy val ifStatement:PackratParser[IfStatement] = (
+    ("if" ~ "(" ~> element <~ ")") ~ element ~ ((elseifStatement | elseStatement)?)) ^^ {
+        case (x:Element) ~ (y:Element) ~ (z:Option[Element]) => {
+          new IfStatement(x, y, if (z.isDefined) z.get else new CodeBlock())
+        }
+      }
 
-  lazy val whileLoop:PackratParser[Any] = ("while" ~ "(") ~> booleanExpression <~ ")" <~ codeBlock
+  lazy val elseifStatement:PackratParser[Element] = "else" ~> ifStatement
+
+  lazy val elseStatement:PackratParser[Element] = "else" ~> element
+
+  lazy val whileLoop:PackratParser[WhileLoop] = (("while" ~ "(" ~> element <~ ")") ~ element) ^^ {
+
+    case (x:Element) ~ (y:Element) => new WhileLoop(x,y)
+
+  }
 
 }
