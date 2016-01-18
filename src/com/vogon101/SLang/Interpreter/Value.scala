@@ -5,7 +5,11 @@ package com.vogon101.SLang.Interpreter
  */
 class Value (value: Any) extends Element{
 
-  def run() = value
+  def run() = value match {
+    case value:List[Element] => value.map(_.run())
+    case value:Element       => value.run()
+    case _                   => value
+  }
 
   override def debug(): Unit = {
     println(s"VALUE: $value")

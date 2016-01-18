@@ -7,7 +7,7 @@ class Value (val value:Any) extends Element{
 
   def run () :Any = {
     value match {
-      case v:List[Value] => v.map(x=>x.run())
+      case v:List[Element] => v.map(x=>x.run())
       case v:Value =>v.run()
       case v => v
     }

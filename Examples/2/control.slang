@@ -18,6 +18,8 @@ else if (myVar == 4)
 else
     print("You entered a number greater than or equal to 5")
 
+print (if (2>3) "Bad" else "Good")
+
 
 x = 1
 while (x < 10) {

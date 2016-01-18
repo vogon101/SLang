@@ -1,9 +1,9 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>Program - SLang documentation - com.vogon101.SLang0.interpreter.Program</title>
-          <meta name="description" content="Program - SLang documentation - com.vogon101.SLang0.interpreter.Program" />
-          <meta name="keywords" content="Program SLang documentation com.vogon101.SLang0.interpreter.Program" />
+          <title>Program - SLang documentation - com.vogon101.SLang.Interpreter.Program</title>
+          <meta name="description" content="Program - SLang documentation - com.vogon101.SLang.Interpreter.Program" />
+          <meta name="keywords" content="Program SLang documentation com.vogon101.SLang.Interpreter.Program" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -16,7 +16,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../index.html';
-            var hash = 'com.vogon101.SLang.interpreter.Program';
+            var hash = 'com.vogon101.SLang.Interpreter.Program';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -29,9 +29,9 @@
         <body class="type">
       <div id="definition">
         <a href="Program$.html" title="Go to companion"><img src="../../../../lib/class_to_object_big.png" /></a>
-        <p id="owner"><a href="../../../package.html" class="extype" name="com">com</a>.<a href="../../package.html" class="extype" name="com.vogon101">vogon101</a>.<a href="../package.html" class="extype" name="com.vogon101.SLang0">SLang</a>.<a href="package.html" class="extype" name="com.vogon101.SLang0.interpreter">interpreter</a></p>
+        <p id="owner"><a href="../../../package.html" class="extype" name="com">com</a>.<a href="../../package.html" class="extype" name="com.vogon101">vogon101</a>.<a href="../package.html" class="extype" name="com.vogon101.SLang">SLang</a>.<a href="package.html" class="extype" name="com.vogon101.SLang.Interpreter">Interpreter</a></p>
         <h1><a href="Program$.html" title="Go to companion">Program</a></h1> <span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -47,7 +47,8 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Created by Freddie on 21/12/2015.</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Created by Freddie Poser on 16/01/2016.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -67,7 +68,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.vogon101.SLang0.interpreter.Program"><span>Program</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.vogon101.SLang.Interpreter.Program"><span>Program</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -87,8 +88,8 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="com.vogon101.SLang0.interpreter.Program#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(parser:com.vogon101.SLang0.parsers.SLangParser,programText:String):com.vogon101.SLang0.interpreter.Program"></a>
+              <ol><li name="com.vogon101.SLang.Interpreter.Program#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(lines:List[com.vogon101.SLang.Interpreter.Line]):com.vogon101.SLang.Interpreter.Program"></a>
       <a id="&lt;init&gt;:Program"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -96,27 +97,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Program</span><span class="params">(<span name="parser">parser: <a href="../parsers/SLangParser.html" class="extype" name="com.vogon101.SLang0.parsers.SLangParser">SLangParser</a></span>, <span name="programText">programText: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
+        <span class="name">Program</span><span class="params">(<span name="lines">lines: <span class="extype" name="scala.List">List</span>[<a href="Line.html" class="extype" name="com.vogon101.SLang.Interpreter.Line">Line</a>]</span>)</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@&lt;init&gt;(parser:com.vogon101.SLang.parsers.SLangParser,programText:String):com.vogon101.SLang.interpreter.Program" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
-      </a>
-    </span>
-      
-    </li><li name="com.vogon101.SLang0.interpreter.Program#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(lines:List[com.vogon101.SLang0.interpreter.Line]):com.vogon101.SLang0.interpreter.Program"></a>
-      <a id="&lt;init&gt;:Program"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">Program</span><span class="params">(<span name="lines">lines: <span class="extype" name="scala.List">List</span>[<a href="Line.html" class="extype" name="com.vogon101.SLang0.interpreter.Line">Line</a>]</span>)</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@&lt;init&gt;(lines:List[com.vogon101.SLang.interpreter.Line]):com.vogon101.SLang.interpreter.Program" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@&lt;init&gt;(lines:List[com.vogon101.SLang.Interpreter.Line]):com.vogon101.SLang.Interpreter.Program" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -142,7 +126,7 @@
         <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@!=(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -159,7 +143,7 @@
         <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@##():Int" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@##():Int" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -176,28 +160,11 @@
         <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@==(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@==(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.vogon101.SLang0.interpreter.Program#addFunction" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="addFunction(name:String,function:com.vogon101.SLang0.interpreter.Function):Unit"></a>
-      <a id="addFunction(String,Function):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">addFunction</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="function">function: <a href="Function.html" class="extype" name="com.vogon101.SLang0.interpreter.Function">Function</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@addFunction(name:String,function:com.vogon101.SLang.interpreter.Function):Unit" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
-      </a>
-    </span>
-      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -210,7 +177,7 @@
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@asInstanceOf[T0]:T0" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -227,7 +194,7 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@clone():Object" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@clone():Object" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -238,7 +205,7 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="com.vogon101.SLang0.interpreter.Program#debug" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="com.vogon101.SLang.Interpreter.Program#debug" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="debug():Unit"></a>
       <a id="debug():Unit"></a>
       <h4 class="signature">
@@ -250,7 +217,7 @@
         <span class="name">debug</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@debug():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@debug():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -267,7 +234,7 @@
         <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -284,7 +251,7 @@
         <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@equals(x$1:Any):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -301,7 +268,7 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@finalize():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@finalize():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -312,23 +279,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="com.vogon101.SLang0.interpreter.Program#functions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="functions:Map[String,com.vogon101.SLang0.interpreter.Function]"></a>
-      <a id="functions:Map[String,Function]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">functions</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="Function.html" class="extype" name="com.vogon101.SLang0.interpreter.Function">Function</a>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@functions:Map[String,com.vogon101.SLang.interpreter.Function]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -341,62 +291,11 @@
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@getClass():Class[_]" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@getClass():Class[_]" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.vogon101.SLang0.interpreter.Program#getFunction" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getFunction(name:String):com.vogon101.SLang0.interpreter.Function"></a>
-      <a id="getFunction(String):Function"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getFunction</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="Function.html" class="extype" name="com.vogon101.SLang0.interpreter.Function">Function</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@getFunction(name:String):com.vogon101.SLang.interpreter.Function" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
-      </a>
-    </span>
-      
-    </li><li name="com.vogon101.SLang0.interpreter.Program#getVariable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getVariable(name:String):Any"></a>
-      <a id="getVariable(String):Any"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getVariable</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@getVariable(name:String):Any" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
-      </a>
-    </span>
-      
-    </li><li name="com.vogon101.SLang0.interpreter.Program#getVariableOfType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getVariableOfType[T](name:String):T"></a>
-      <a id="getVariableOfType[T](String):T"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getVariableOfType</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="com.vogon101.SLang0.interpreter.Program.getVariableOfType.T">T</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@getVariableOfType[T](name:String):T" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
@@ -409,28 +308,11 @@
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@hashCode():Int" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@hashCode():Int" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.vogon101.SLang0.interpreter.Program#interpret" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="interpret():Unit"></a>
-      <a id="interpret():Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">interpret</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@interpret():Unit" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
-      </a>
-    </span>
-      
     </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
@@ -443,30 +325,30 @@
         <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.vogon101.SLang0.interpreter.Program#lines" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="lines:List[com.vogon101.SLang0.interpreter.Line]"></a>
-      <a id="lines:List[Line]"></a>
+    </li><li name="com.vogon101.SLang.Interpreter.Program#loadFunction" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="loadFunction(name:String,f:com.vogon101.SLang.Interpreter.Function):Unit"></a>
+      <a id="loadFunction(String,Function):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">lines</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="Line.html" class="extype" name="com.vogon101.SLang0.interpreter.Line">Line</a>]</span>
+        <span class="name">loadFunction</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="f">f: <a href="Function.html" class="extype" name="com.vogon101.SLang.Interpreter.Function">Function</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@lines:List[com.vogon101.SLang.interpreter.Line]" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@loadFunction(name:String,f:com.vogon101.SLang.Interpreter.Function):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
       
-    </li><li name="com.vogon101.SLang0.interpreter.Program#loadLib" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="loadLib(library:com.vogon101.SLang0.interpreter.Library):Unit"></a>
+    </li><li name="com.vogon101.SLang.Interpreter.Program#loadLib" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="loadLib(lib:com.vogon101.SLang.Interpreter.STDLIB.Library):Unit"></a>
       <a id="loadLib(Library):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -474,10 +356,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">loadLib</span><span class="params">(<span name="library">library: <a href="Library.html" class="extype" name="com.vogon101.SLang0.interpreter.Library">Library</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">loadLib</span><span class="params">(<span name="lib">lib: <a href="STDLIB/Library.html" class="extype" name="com.vogon101.SLang.Interpreter.STDLIB.Library">Library</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@loadLib(library:com.vogon101.SLang.interpreter.Library):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@loadLib(lib:com.vogon101.SLang.Interpreter.STDLIB.Library):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -494,7 +376,7 @@
         <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -511,7 +393,7 @@
         <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@notify():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@notify():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -528,24 +410,41 @@
         <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@notifyAll():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@notifyAll():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.vogon101.SLang0.interpreter.Program#setVariable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="setVariable(name:String,value:Any):Unit"></a>
-      <a id="setVariable(String,Any):Unit"></a>
+    </li><li name="com.vogon101.SLang.Interpreter.Program#run" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="run():Unit"></a>
+      <a id="run():Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">setVariable</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">run</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@setVariable(name:String,value:Any):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@run():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="com.vogon101.SLang.Interpreter.Program#scope" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="scope:com.vogon101.SLang.Interpreter.Scoping.ScopeStack"></a>
+      <a id="scope:ScopeStack"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">scope</span><span class="result">: <a href="Scoping/ScopeStack.html" class="extype" name="com.vogon101.SLang.Interpreter.Scoping.ScopeStack">ScopeStack</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@scope:com.vogon101.SLang.Interpreter.Scoping.ScopeStack" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -562,7 +461,7 @@
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -579,28 +478,11 @@
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@toString():String" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@toString():String" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="com.vogon101.SLang0.interpreter.Program#variables" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="variables:Map[String,Any]"></a>
-      <a id="variables:Map[String,Any]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">variables</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Any">Any</span>]</span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@variables:Map[String,Any]" title="Permalink" target="_top">
-        <img src="../../../../lib/permalink.png" />
-      </a>
-    </span>
-      
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -613,7 +495,7 @@
         <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@wait():Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@wait():Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -636,7 +518,7 @@
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
@@ -659,7 +541,7 @@
         <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4><span class="permalink">
-      <a href="../../../../index.html#com.vogon101.SLang.interpreter.Program@wait(x$1:Long):Unit" title="Permalink" target="_top">
+      <a href="../../../../index.html#com.vogon101.SLang.Interpreter.Program@wait(x$1:Long):Unit" title="Permalink" target="_top">
         <img src="../../../../lib/permalink.png" />
       </a>
     </span>
