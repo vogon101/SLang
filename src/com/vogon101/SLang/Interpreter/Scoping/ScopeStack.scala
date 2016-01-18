@@ -23,7 +23,7 @@ class ScopeStack extends Scope{
   }
 
   override def set(name:String, value:Any): Unit = {
-    scopes.top.set(name, value)
+      scopes.top.set(name, value)
   }
 
   def setGlobal(name:String, value:Any) = {

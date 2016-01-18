@@ -4,7 +4,7 @@ This is the full list of features that SLang (1.0) offers
   * print("Hello World");
   * print (thisIsAFunction());
   * print (10.4);
-  * To remove the new line at the end, pass a "" last
+  * For print, to remove the new line at the end, pass a "" last
     * print("Test ", "");print("- Same Line", "")
 * Variables
   * myVar = "This is a variable";
@@ -38,8 +38,12 @@ This is the full list of features that SLang (1.0) offers
     * 2 == 2 && 3!=4 Fails
     * Has to be (2==2) && (3!=4)
 * User defined functions
-  * Unlike in SLang0, SLang1 supports UDFs. These are simply assigned to vaiables
+  * Unlike in SLang0, SLang1 supports UDFs. These are simply assigned to variables
   * myFunction = () => {print("HI")}
   * They can also be passed as parameters
     * func ( () => {print("HI")} )
   * They cannot be called inline (i.e. ()={}() fails)
+* Scoping
+  * Also unlike SLang0, SLang1 has a scope stack behind it. This means that variables defined in a function, cannot be accessed from outside
+  * Functions can read, but not write to variables above their scope
+  
