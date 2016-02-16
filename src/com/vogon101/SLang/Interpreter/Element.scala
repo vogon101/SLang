@@ -2,6 +2,7 @@ package com.vogon101.SLang.Interpreter
 
 /**
  * Created by Freddie Poser on 16/01/2016.
+ *
  */
 abstract class Element extends Line{
 
@@ -9,5 +10,7 @@ abstract class Element extends Line{
     println("ELEMENT")
     super.debug()
   }
+
+  override def simplify():Element = this
 
 }

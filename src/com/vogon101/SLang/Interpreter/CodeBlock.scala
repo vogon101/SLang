@@ -2,6 +2,7 @@ package com.vogon101.SLang.Interpreter
 
 /**
  * Created by Freddie Poser on 16/01/2016.
+ *
  */
 class CodeBlock(code: List[Line]) extends Element{
 
@@ -15,6 +16,8 @@ class CodeBlock(code: List[Line]) extends Element{
     }
     null
   }
+
+  override def simplify() = new CodeBlock(code.map(_.simplify()))
 
   override def debug(): Unit = {
     println(s"CodeBlock with ${code.length} lines")

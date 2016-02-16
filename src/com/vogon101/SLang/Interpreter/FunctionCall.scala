@@ -2,6 +2,7 @@ package com.vogon101.SLang.Interpreter
 
 /**
  * Created by Freddie Poser on 16/01/2016.
+ *
  */
 class FunctionCall (name:String, args:List[Element]) extends Element{
 
@@ -9,6 +10,7 @@ class FunctionCall (name:String, args:List[Element]) extends Element{
     Program().scope.get[Function](name).call(args)
   }
 
+  override def simplify() = new FunctionCall (name, args.map(_.simplify()))
 
   override def debug(): Unit = {
     println(s"Function Call of $name")

@@ -8,7 +8,7 @@ import scala.io.{Source, StdIn}
 
 /**
  * Created by Freddie on 15/02/2016.
- * 
+ *
  */
 object TestSimplify extends App{
 

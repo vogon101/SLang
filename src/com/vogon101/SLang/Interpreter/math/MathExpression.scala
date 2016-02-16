@@ -1,14 +1,12 @@
 package com.vogon101.SLang.Interpreter.math
 
-import com.vogon101.SLang.Interpreter.Element
+import com.vogon101.SLang.Interpreter.{Value, Element}
 
 /**
  * Created by Freddie Poser on 25/12/2015.
  *
  */
-class MathExpression (value: MathExpression = null) extends Element{
-
-  def run(): Any = value.run()
+abstract class MathExpression extends Element{
 
   override def debug(): Unit = {
     println("Math Expression")
@@ -17,8 +15,16 @@ class MathExpression (value: MathExpression = null) extends Element{
 
 }
 
+abstract class BinaryOp(lhs:Element, rhs:Element) extends MathExpression {
 
-class Power(a:Element, b:Element) extends MathExpression {
+  override def simplify() = (lhs.simplify(), rhs.simplify()) match {
+    case (a:Value, b:Value) => new Value(run())
+    case _ => this
+  }
+
+}
+
+class Power(a:Element, b:Element) extends BinaryOp(a,b) {
   override def run(): Any = {
     val result = (a.run(),b.run()) match {
       case (a:Int, b:Int) => math.pow(a,b)
@@ -34,7 +40,7 @@ class Power(a:Element, b:Element) extends MathExpression {
 }
 
 
-class Add(a:Element, b:Element) extends MathExpression {
+class Add(a:Element, b:Element) extends BinaryOp(a,b) {
   override def run(): Any = (a.run(),b.run()) match {
     case (a:Int, b:Int) => a+b
     case (a:Float, b:Float) => a+b
@@ -50,7 +56,7 @@ class Add(a:Element, b:Element) extends MathExpression {
 }
 
 
-class Subtract(a:Element, b:Element) extends MathExpression {
+class Subtract(a:Element, b:Element) extends BinaryOp(a,b) {
   override def run(): Any = (a.run(),b.run()) match {
     case (a:Int, b:Int) => a-b
     case (a:Float, b:Float) => a-b
@@ -61,7 +67,7 @@ class Subtract(a:Element, b:Element) extends MathExpression {
 }
 
 
-class Divide(a:Element, b:Element) extends MathExpression {
+class Divide(a:Element, b:Element) extends BinaryOp(a,b) {
   override def run(): Any = {(a.run(),b.run()) match {
     case (a:Int, b:Int) => a/b
     case (a:Float, b:Float) => a/b
@@ -71,7 +77,7 @@ class Divide(a:Element, b:Element) extends MathExpression {
 }
 
 
-class Multiply (a:Element, b:Element) extends MathExpression {
+class Multiply (a:Element, b:Element) extends BinaryOp(a,b) {
   override def run(): Any = (a.run(),b.run()) match {
     case (a:Int, b:Int) => a*b
     case (a:Float, b:Float) => a*b

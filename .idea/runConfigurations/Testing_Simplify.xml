@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="DebugConsoleLineApplication" type="Application" factoryName="Application">
+  <configuration default="false" name="Testing Simplify" type="Application" factoryName="Application">
     <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-    <option name="MAIN_CLASS_NAME" value="com.vogon101.SLang0.application.DebugConsoleLineApplication" />
+    <option name="MAIN_CLASS_NAME" value="com.vogon101.SLang.Test.TestSimplify" />
     <option name="VM_PARAMETERS" value="" />
     <option name="PROGRAM_PARAMETERS" value="" />
     <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />

@@ -2,6 +2,7 @@ package com.vogon101.SLang.Interpreter
 
 /**
  * Created by Freddie Poser on 16/01/2016.
+ *
  */
 abstract class Line {
 
@@ -10,5 +11,7 @@ abstract class Line {
   def debug(): Unit ={
     println("LINE")
   }
+
+  def simplify(): Line = this
 
 }

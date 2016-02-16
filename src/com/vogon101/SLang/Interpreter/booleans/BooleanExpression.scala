@@ -1,23 +1,27 @@
 package com.vogon101.SLang.Interpreter.booleans
 
-import com.vogon101.SLang.Interpreter.Element
+import com.vogon101.SLang.Interpreter.{Value, Element}
 
 /**
  * Created by Freddie Poser on 27/12/2015.
+ *
  */
-class BooleanExpression (value: BooleanExpression = null) extends Element{
-
-  def run(): Boolean = value.run()
+abstract class BooleanExpression (lhs: Element, rhs: Element) extends Element{
 
   override def debug(): Unit = {
     println("BOOLEAN EXPR")
     super.debug()
   }
 
+  override def simplify () = (lhs.simplify(), rhs.simplify()) match {
+    case (a:Value, b:Value) => new Value(run())
+    case _ => this
+  }
+
 }
 
 
-class And (x: Element, y: Element) extends BooleanExpression {
+class And (x: Element, y: Element) extends BooleanExpression(x,y) {
 
   override def run () = x.run().asInstanceOf[Boolean] && y.run().asInstanceOf[Boolean]
 
@@ -33,7 +37,7 @@ class And (x: Element, y: Element) extends BooleanExpression {
 }
 
 
-class Or (x: Element, y:Element) extends BooleanExpression {
+class Or (x: Element, y:Element) extends BooleanExpression(x,y) {
 
   override def run() = x.run().asInstanceOf[Boolean] | y.run().asInstanceOf[Boolean]
 
@@ -45,7 +49,7 @@ class Or (x: Element, y:Element) extends BooleanExpression {
 }
 
 
-class Equals (x: Element, y:Element) extends BooleanExpression {
+class Equals (x: Element, y:Element) extends BooleanExpression(x,y) {
 
   override def run() = x.run() == y.run()
 
@@ -62,7 +66,7 @@ class Equals (x: Element, y:Element) extends BooleanExpression {
 }
 
 
-class NotEquals (x: Element, y:Element) extends BooleanExpression {
+class NotEquals (x: Element, y:Element) extends BooleanExpression(x,y) {
 
   override def run() = x.run() != y.run()
 
@@ -80,7 +84,7 @@ class NotEquals (x: Element, y:Element) extends BooleanExpression {
 }
 
 
-class GT (x: Element, y:Element) extends BooleanExpression {
+class GT (x: Element, y:Element) extends BooleanExpression(x,y) {
 
   override def run() = (x.run(), y.run()) match {
     case (x:Int, y:Int) => x > y
@@ -92,7 +96,7 @@ class GT (x: Element, y:Element) extends BooleanExpression {
 }
 
 
-class LT (x: Element, y:Element) extends BooleanExpression {
+class LT (x: Element, y:Element) extends BooleanExpression(x,y) {
 
   override def run() = (x.run(), y.run()) match {
     case (x:Int, y:Int) => x < y
@@ -104,7 +108,7 @@ class LT (x: Element, y:Element) extends BooleanExpression {
 }
 
 
-class GTE (x: Element, y:Element) extends BooleanExpression {
+class GTE (x: Element, y:Element) extends BooleanExpression(x,y) {
 
   override def run() = (x.run(), y.run()) match {
     case (x:Int, y:Int) => x >= y
@@ -116,7 +120,7 @@ class GTE (x: Element, y:Element) extends BooleanExpression {
 }
 
 
-class LTE (x: Element, y:Element) extends BooleanExpression {
+class LTE (x: Element, y:Element) extends BooleanExpression(x,y) {
 
   override def run() = (x.run(), y.run()) match {
     case (x:Int, y:Int) => x <= y

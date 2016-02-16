@@ -8,6 +8,7 @@ import com.vogon101.SLang.Interpreter.booleans._
 
 /**
  * Created by Freddie Poser on 16/01/2016.
+ *
  */
 trait BooleanParsers extends JavaTokenParsers with PackratParsers{
 
@@ -32,10 +33,10 @@ trait BooleanParsers extends JavaTokenParsers with PackratParsers{
   }
 
   lazy val boolean:PackratParser[Element] = (
-    element
-      | "(" ~> comparison <~ ")"
+        "(" ~> comparison <~ ")"
       | "(" ~> booleanExpression <~ ")"
       | booleanLiteral
+      | element
     ) ^^ (x=>x.asInstanceOf[Element])
 
   lazy val booleanLiteral: PackratParser[Value] = "true" ^^ (x=>new Value(true)) | "false" ^^ (x=>new Value(false))
