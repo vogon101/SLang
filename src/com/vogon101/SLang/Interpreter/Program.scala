@@ -6,6 +6,7 @@ import com.vogon101.SLang.Interpreter.Scoping.ScopeStack
 
 /**
  * Created by Freddie Poser on 16/01/2016.
+ * 
  */
 class Program (lines:List[Line]){
 
@@ -29,6 +30,8 @@ class Program (lines:List[Line]){
     println(s"Program with ${lines.length} lines")
     lines.foreach(_.debug())
   }
+
+  def simplified = new Program(lines.map(_.simplify()))
 
   Program.addAvailableLibs(StandardLib.libs)
   this.loadLib(new STDIOFunctions())
